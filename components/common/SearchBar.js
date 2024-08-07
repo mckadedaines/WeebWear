@@ -32,6 +32,7 @@ function SearchBar() {
             transition: "border-color 0.3s",
             borderWidth: "3px",
             boxShadow: "2px 1px 3px 1px rgba(0,0,0,0.3)",
+            borderRadius: "50px",
           },
           "&:hover fieldset": {
             borderColor: "pink",
@@ -41,7 +42,7 @@ function SearchBar() {
           color: "black",
         },
         backgroundColor: focused ? "white" : "white",
-        borderRadius: "5px",
+        borderRadius: "50px",
       }}
     />
   );

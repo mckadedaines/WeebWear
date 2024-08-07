@@ -55,17 +55,31 @@ export default function CustomDrawer() {
   );
 
   return (
-    <div>
+    <Box>
       <Button
         variant="contained"
-        sx={{ backgroundColor: "pink", color: "#333333", fontWeight: "bold" }}
+        sx={{
+          backgroundColor: "pink",
+          color: "#333333",
+          fontWeight: "bold",
+          borderRadius: "50px",
+        }}
         onClick={toggleDrawer(true)}
       >
         Open drawer
       </Button>
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            borderRadius: "16px 0px 0px 16px", // Same border radius as the drawer
+          },
+        }}
+      >
         {DrawerList}
       </Drawer>
-    </div>
+    </Box>
   );
 }

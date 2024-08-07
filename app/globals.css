@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: #d3d3d3; /* Using hexadecimal color code for a light gray background */
+  background-color: white; /* Using hexadecimal color code for a light gray background */
 }
