@@ -11,7 +11,7 @@ function ImageCarousel() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("/data/animeCarousel.json")
+    fetch("/image_data/animeCarousel.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok " + response.statusText);
