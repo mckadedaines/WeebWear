@@ -33,8 +33,18 @@ function ImageCarousel() {
   };
 
   return (
-    <Box display="flex" justifyContent="center" alignItems="center">
-      <Slider {...settings} style={{ width: "50vw" }}>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        pt: "5vh",
+        pb: "5vh",
+        background:
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
+      }}
+    >
+      <Slider {...settings} style={{ width: "50%" }}>
         {images.map((image, index) => (
           <Box
             key={index}
@@ -54,7 +64,7 @@ function ImageCarousel() {
                 src={image.src}
                 alt={image.title}
                 layout="fill"
-                objectFit="contain"
+                objectFit="fill"
                 style={{ borderRadius: "10px" }}
               />
               <Box

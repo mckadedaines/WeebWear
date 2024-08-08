@@ -15,7 +15,9 @@ function SearchBar() {
       focused={focused}
       InputLabelProps={{
         style: {
-          color: focused ? "black" : "black",
+          color: focused ? "white" : "black",
+          fontWeight: focused ? "bold" : "normal",
+          fontSize: focused ? "large" : "medium",
         },
       }}
       InputProps={{
@@ -41,7 +43,7 @@ function SearchBar() {
         "& .MuiInputBase-input": {
           color: "black",
         },
-        backgroundColor: focused ? "white" : "white",
+        backgroundColor: focused ? "lightgray" : "lightgray",
         borderRadius: "50px",
       }}
     />

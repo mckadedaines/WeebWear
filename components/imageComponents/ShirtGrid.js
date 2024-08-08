@@ -24,12 +24,8 @@ function ShirtGrid() {
   return (
     <Box
       sx={{
-        mt: "50px",
         display: "flex",
         justifyContent: "center",
-        // backgroundColor: "black",
-        // pt: "25px",
-        // pb: "25px",
       }}
     >
       <ImageList
@@ -46,11 +42,19 @@ function ShirtGrid() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              p: 2,
+              pl: 2,
+              pr: 2,
+              pb: 2,
               bgcolor: "background.paper",
               width: 300, // Set fixed width
               height: 400, // Set fixed height to accommodate image and text
               marginRight: 4,
+              transition: "all 0.3s ease-in-out", // Transition for smooth hover effect
+              "&:hover": {
+                transform: "scale(1.1)", // Scale the card to 110% of its original size
+              },
+              mt: "25px",
+              mb: "25px",
             }}
           >
             <Box
@@ -77,6 +81,9 @@ function ShirtGrid() {
               {shirtImage.title}
             </Typography>
             <Typography>{shirtImage.description}</Typography>
+            <Typography sx={{ fontWeight: "bold" }}>
+              {shirtImage.price}
+            </Typography>
           </ImageListItem>
         ))}
       </ImageList>

@@ -9,7 +9,7 @@ function Header() {
   };
 
   return (
-    <Box className="flex justify-between items-center p-4">
+    <Box className="flex justify-between items-center p-4 bg-black">
       <Image
         width={300}
         height={300}
