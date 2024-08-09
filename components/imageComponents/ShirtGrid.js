@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Typography } from "@mui/material";
 
 function ShirtGrid() {
-  const [shirtImages, setShirtImages] = useState([]);
+  const [shirtData, setShirtData] = useState([]);
 
   useEffect(() => {
     fetch("/shirt_data/shirtData.json")
@@ -17,7 +17,7 @@ function ShirtGrid() {
         }
         return response.json();
       })
-      .then((data) => setShirtImages(data))
+      .then((data) => setShirtData(data))
       .catch((error) => console.error("Error fetching images:", error));
   }, []);
 
@@ -32,7 +32,7 @@ function ShirtGrid() {
         sx={{ display: "flex", flexDirection: "row", gap: 2 }}
         cols={shirtImages.length}
       >
-        {shirtImages.map((shirtImage, index) => (
+        {shirtImages.map((shirtData, index) => (
           <ImageListItem
             key={index}
             sx={{
@@ -68,8 +68,8 @@ function ShirtGrid() {
               }}
             >
               <Image
-                src={shirtImage.src}
-                alt={shirtImage.title}
+                src={shirtData.src}
+                alt={shirtData.title}
                 layout="fixed"
                 width={300} // Set fixed width
                 height={300} // Set fixed height
@@ -78,11 +78,11 @@ function ShirtGrid() {
               />
             </Box>
             <Typography sx={{ fontWeight: "bold", mt: 1 }}>
-              {shirtImage.title}
+              {shirtData.title}
             </Typography>
-            <Typography>{shirtImage.description}</Typography>
+            <Typography>{shirtData.description}</Typography>
             <Typography sx={{ fontWeight: "bold" }}>
-              {shirtImage.price}
+              {shirtData.price}
             </Typography>
           </ImageListItem>
         ))}
