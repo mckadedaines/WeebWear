@@ -30,9 +30,9 @@ function ShirtGrid() {
     >
       <ImageList
         sx={{ display: "flex", flexDirection: "row", gap: 2 }}
-        cols={shirtImages.length}
+        cols={shirtData.length}
       >
-        {shirtImages.map((shirtData, index) => (
+        {shirtData.map((shirtData, index) => (
           <ImageListItem
             key={index}
             sx={{
