@@ -6,7 +6,7 @@ import PantsGrid from "@/components/imageComponents/PantsGrid";
 
 export default function Home() {
   return (
-    <Box>
+    <Box className="bg-black">
       <Header />
       <ImageCarousel />
       <ShirtGrid />

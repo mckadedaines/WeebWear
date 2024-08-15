@@ -30,7 +30,7 @@ export default function CustomDrawer() {
       onClick={toggleDrawer(false)}
     >
       <List>
-        {["T-Shirts", "Pants", "Socks"].map((text, index) => (
+        {["T-Shirts", "Pants"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemText primary={text} />

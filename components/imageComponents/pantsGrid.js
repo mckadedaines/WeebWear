@@ -28,14 +28,20 @@ function PantsGrid() {
       }}
     >
       <ImageList
-        sx={{ display: "flex", flexDirection: "row", gap: 2 }}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          gap: 2,
+          pr: "25px",
+          pl: "25px",
+        }}
         cols={pantsData.length}
       >
         {pantsData.map((pantsData, index) => (
           <ImageListItem
             key={index}
             sx={{
-              borderRadius: 2,
+              position: "relative", // Enable z-index to work
               boxShadow: 3,
               overflow: "hidden",
               display: "flex",
@@ -47,12 +53,13 @@ function PantsGrid() {
               bgcolor: "background.paper",
               width: 300, // Set fixed width
               height: 400, // Set fixed height to accommodate image and text
-              marginRight: 4,
               transition: "all 0.3s ease-in-out", // Transition for smooth hover effect
+              zIndex: 1, // Default z-index
               "&:hover": {
                 transform: "scale(1.1)", // Scale the card to 110% of its original size
+                zIndex: 2, // Bring the hovered card in front
+                transformOrigin: "center", // Control the scaling origin
               },
-              mt: "25px",
               mb: "25px",
             }}
           >
