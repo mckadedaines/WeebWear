@@ -40,8 +40,6 @@ function ImageCarousel() {
       sx={{
         pt: "5vh",
         pb: "5vh",
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
       }}
     >
       <Slider {...settings} style={{ width: "50%" }}>
