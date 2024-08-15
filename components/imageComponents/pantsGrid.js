@@ -50,6 +50,7 @@ function PantsGrid() {
               pl: 2,
               pr: 2,
               pb: 2,
+              margin: 1,
               bgcolor: "background.paper",
               width: 300, // Set fixed width
               height: 400, // Set fixed height to accommodate image and text
