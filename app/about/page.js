@@ -53,7 +53,7 @@ export default function About() {
               WeebWear was born from a simple observation: the incredible
               overlap between anime enthusiasts and fitness lovers. We noticed
               that many gym-goers were also passionate about anime, yet there
-              wasn't a brand that truly celebrated both cultures together.
+              wasn&apos;t a brand that truly celebrated both cultures together.
             </p>
             <p className="text-foreground/80 leading-relaxed">
               Our mission is to create high-quality gym wear that allows you to

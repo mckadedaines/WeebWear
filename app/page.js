@@ -22,7 +22,7 @@ export default function Home() {
       price: 34.99,
       image: "/images/products/shirts/chainsaw-dog-pump-cover.png",
       category: "shirts",
-      description: "Featuring everyone's favorite devil dog",
+      description: "Featuring everyone&apos;s favorite devil dog",
     },
     {
       id: 3,
