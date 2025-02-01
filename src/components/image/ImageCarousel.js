@@ -50,6 +50,10 @@ function ImageCarousel() {
             width="100%"
             paddingTop="56.25%" // Aspect ratio 16:9 for half the width
             overflow="hidden"
+            sx={{ cursor: "pointer" }}
+            onClick={() =>
+              window.open(image.url, "_blank", "noopener,noreferrer")
+            }
           >
             <Box
               position="absolute"

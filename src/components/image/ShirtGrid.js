@@ -64,7 +64,11 @@ function ShirtGrid() {
               },
               mt: "25px",
               mb: "25px",
+              cursor: "pointer", // Add cursor pointer to indicate clickable
             }}
+            onClick={() =>
+              window.open(shirtData.url, "_blank", "noopener,noreferrer")
+            }
           >
             <Box
               sx={{

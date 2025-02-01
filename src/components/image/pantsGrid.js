@@ -62,7 +62,11 @@ function PantsGrid() {
                 transformOrigin: "center", // Control the scaling origin
               },
               mb: "25px",
+              cursor: "pointer", // Add cursor pointer to indicate clickable
             }}
+            onClick={() =>
+              window.open(pantsData.url, "_blank", "noopener,noreferrer")
+            }
           >
             <Box
               sx={{
