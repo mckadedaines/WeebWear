@@ -1,6 +1,6 @@
 [
   {
-    "src": "/zero2-pump-cover.jpg",
+    "src": "/images/products/shirts/zero2-pump-cover.jpg",
     "title": "Zero Two Pump Cover",
     "width": 300,
     "height": 300,
@@ -9,7 +9,7 @@
     "price": "$20.97"
   },
   {
-    "src": "/Bleach-pump-cover.jpg",
+    "src": "/images/products/shirts/Bleach-pump-cover.jpg",
     "title": "Bleach Pump Cover",
     "width": 300,
     "height": 300,
@@ -18,7 +18,7 @@
     "price": "$38.97"
   },
   {
-    "src": "/Hatsune-Miku-pump-cover.jpg",
+    "src": "/images/products/shirts/Hatsune-Miku-pump-cover.jpg",
     "title": "Hatsune Miku Pump Cover",
     "width": 300,
     "height": 300,
@@ -27,7 +27,7 @@
     "price": "$19.47"
   },
   {
-    "src": "/chainsaw-dog-pump-cover.png",
+    "src": "/images/products/shirts/chainsaw-dog-pump-cover.png",
     "title": "Pochita from Chainsaw Man Pump Cover",
     "width": 300,
     "height": 300,
@@ -36,7 +36,7 @@
     "price": "$44.99"
   },
   {
-    "src": "/robin-pump-cover.jpg",
+    "src": "/images/products/shirts/robin-pump-cover.jpg",
     "title": "Robin from One Piece Pump Cover",
     "width": 300,
     "height": 300,

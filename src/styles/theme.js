@@ -2,24 +2,24 @@ export const theme = {
   colors: {
     // Primary colors with a modern gradient palette
     primary: {
-      DEFAULT: "#8B5CF6", // Vibrant purple
-      light: "#A78BFA",
-      dark: "#7C3AED",
-      gradient: "linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%)",
+      DEFAULT: "#4D9CFF", // Bright blue
+      light: "#7DB9FF",
+      dark: "#2E7FFF",
+      gradient: "linear-gradient(135deg, #4D9CFF 0%, #FFFFFF 100%)",
     },
     // Secondary colors for accents
     secondary: {
-      DEFAULT: "#3B82F6", // Electric blue
-      light: "#60A5FA",
-      dark: "#2563EB",
-      gradient: "linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)",
+      DEFAULT: "#B8DBFF", // Light blue
+      light: "#D6EBFF",
+      dark: "#9CCBFF",
+      gradient: "linear-gradient(135deg, #B8DBFF 0%, #FFFFFF 100%)",
     },
     // Accent colors for highlights
     accent: {
-      DEFAULT: "#EC4899", // Neon pink
-      light: "#F472B6",
-      dark: "#DB2777",
-      gradient: "linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)",
+      DEFAULT: "#E8F4FF", // Very light blue
+      light: "#F5FAFF",
+      dark: "#DAE9FF",
+      gradient: "linear-gradient(135deg, #E8F4FF 0%, #FFFFFF 100%)",
     },
     // Dark theme neutrals
     neutral: {

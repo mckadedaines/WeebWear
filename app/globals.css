@@ -10,19 +10,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 263.4 70% 50.4%;
+    --primary: 214 100% 60%; /* More saturated bright blue */
     --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 213 100% 75%; /* Brighter light blue */
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 215 100% 95%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 214 100% 60%;
     --radius: 0.75rem;
     --font-sans: var(--font-inter);
     --font-heading: var(--font-poppins);
@@ -108,8 +108,18 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl 
-           hover:bg-white/[0.15] transition-all duration-300;
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl 
+           transition-all duration-300;
+  }
+
+  .featured-card {
+    @apply glass-card hover:bg-white/10 hover:border-white/30 
+           hover:shadow-[0_0_30px_rgba(77,156,255,0.3)] hover:backdrop-blur-xl
+           transform transition-all duration-500 ease-out;
+  }
+
+  .featured-card:hover .card-content {
+    @apply bg-gradient-to-t from-black/80 via-black/50 to-transparent;
   }
 
   .glass-button {
@@ -172,7 +182,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-primary to-secondary;
   }
 
   .animate-float {
@@ -218,11 +228,11 @@
   }
 
   .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-primary to-secondary;
   }
 
   .text-gradient-secondary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-blue-500 to-purple-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-white;
   }
 }
 

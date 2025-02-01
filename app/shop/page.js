@@ -155,33 +155,43 @@ export default function Shop() {
             <motion.div
               key={product.id}
               variants={itemVariants}
-              className="glass-card group relative overflow-hidden"
-              whileHover={{ y: -5 }}
+              className="glass-card group relative overflow-hidden h-full transition-all duration-150 ease-out hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:backdrop-blur-lg"
+              initial={false}
+              whileHover={{
+                y: -5,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
             >
               <a
                 href={product.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-lg block"
+                className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-lg block h-full group-hover:bg-white/[0.02]"
               >
-                <div className="relative aspect-square">
+                <div className="relative w-full pt-[100%] overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transform group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="absolute top-0 left-0 object-cover transform group-hover:scale-105 transition-all duration-150 ease-out"
+                    priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-150 ease-out" />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-150 ease-out bg-gradient-to-r from-primary/10 to-purple-500/10" />
                 </div>
-                <div className="p-4 relative">
-                  <span className="inline-block px-2 py-1 mb-2 text-xs font-semibold glass-effect-light rounded-full capitalize">
+                <div className="p-4 relative transition-all duration-150 ease-out group-hover:bg-white/[0.02]">
+                  <span className="inline-block px-2 py-1 mb-2 text-xs font-semibold glass-effect-light rounded-full capitalize group-hover:shadow-[0_0_10px_rgba(139,92,246,0.3)] transition-all duration-150 ease-out">
                     {product.category}
                   </span>
-                  <h2 className="font-heading text-lg mb-2 group-hover:text-gradient-primary transition-all duration-300">
+                  <h2 className="font-heading text-lg mb-2 group-hover:text-gradient-primary transition-all duration-150 ease-out">
                     {product.name}
                   </h2>
-                  <p className="text-gradient-primary font-semibold">
+                  <p className="text-gradient-primary font-semibold group-hover:scale-105 transition-transform duration-150 ease-out">
                     ${product.price.toFixed(2)}
                   </p>
                 </div>

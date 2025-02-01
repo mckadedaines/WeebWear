@@ -11,30 +11,34 @@ export default function Home() {
     {
       id: 1,
       name: "Zero Two Pump Cover",
-      price: 20.97,
+      price: 29.99,
       image: "/images/products/shirts/zero2-pump-cover.jpg",
       category: "shirts",
+      description: "Darling in the Franxx inspired design",
     },
     {
       id: 2,
-      name: "Bleach Pump Cover",
-      price: 38.97,
-      image: "/images/products/shirts/Bleach-pump-cover.jpg",
+      name: "Chainsaw Man Pochita",
+      price: 34.99,
+      image: "/images/products/shirts/chainsaw-dog-pump-cover.png",
       category: "shirts",
+      description: "Featuring everyone's favorite devil dog",
     },
     {
       id: 3,
-      name: "Pochita Pump Cover",
-      price: 44.99,
-      image: "/images/products/shirts/chainsaw-dog-pump-cover.png",
+      name: "Bleach Soul Society",
+      price: 32.99,
+      image: "/images/products/shirts/Bleach-pump-cover.jpg",
       category: "shirts",
+      description: "Soul Society inspired streetwear",
     },
     {
       id: 4,
-      name: "Robin Pump Cover",
-      price: 29.99,
+      name: "One Piece Robin",
+      price: 31.99,
       image: "/images/products/shirts/robin-pump-cover.jpg",
       category: "shirts",
+      description: "Nico Robin aesthetic design",
     },
   ];
 
@@ -121,7 +125,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="inline-block mb-4 text-sm sm:text-base uppercase bg-clip-text text-transparent bg-gradient-to-r from-primary-light/90 to-secondary-light/90 font-bold tracking-widest"
+              className="inline-block mb-4 text-sm sm:text-base uppercase text-white font-bold tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
             >
               WELCOME TO WEEBWEAR
             </motion.span>
@@ -130,7 +134,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="block bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-primary-DEFAULT to-secondary-light drop-shadow-lg"
+                className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-primary to-secondary drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
               >
                 Anime-Inspired
               </motion.span>
@@ -146,7 +150,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
               className="text-lg sm:text-xl mb-10 text-neutral-200 max-w-2xl font-light leading-relaxed drop-shadow-md"
             >
               Express your passion for anime through our exclusive collection of
@@ -156,7 +160,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
+              transition={{ duration: 0.8, delay: 1.8 }}
               className="relative z-10"
             >
               <Link
@@ -197,33 +201,37 @@ export default function Home() {
               <motion.div
                 key={product.id}
                 variants={itemVariants}
-                className="glass-card group relative overflow-hidden"
+                className="featured-card group relative overflow-hidden rounded-xl"
                 whileHover={{ y: -5 }}
               >
                 <Link
                   href={`/shop?category=${product.category}`}
-                  className="block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-lg"
+                  className="block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-xl"
                 >
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative h-[300px] w-full overflow-hidden rounded-t-xl">
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
                       className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      loading="lazy"
+                      priority={product.id === 1}
+                      loading={product.id === 1 ? undefined : "lazy"}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="card-content absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="p-4 relative">
-                    <h3 className="font-heading text-lg mb-2 group-hover:text-gradient-primary transition-all duration-300">
+                  <div className="p-4 relative z-10">
+                    <h3 className="font-heading text-lg mb-1 text-white group-hover:text-primary transition-colors duration-300">
                       {product.name}
                     </h3>
-                    <p className="text-gradient-primary font-semibold">
+                    <p className="text-sm text-white/70 mb-2">
+                      {product.description}
+                    </p>
+                    <p className="text-primary font-semibold">
                       ${product.price}
                     </p>
-                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="glass-button inline-block w-full text-center py-2 rounded-lg">
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                      <span className="glass-button inline-block w-full text-center py-2 rounded-lg text-white">
                         View Details
                       </span>
                     </div>

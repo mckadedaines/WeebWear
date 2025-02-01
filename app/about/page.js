@@ -68,7 +68,7 @@ export default function About() {
             className="relative h-[400px] glass-card rounded-xl overflow-hidden"
           >
             <Image
-              src="/images/about-hero.jpg"
+              src="/images/weebwear-about-us.webp"
               alt="WeebWear Inspiration"
               fill
               className="object-cover"
