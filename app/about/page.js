@@ -117,7 +117,7 @@ export default function About() {
             Join Our Community
           </h2>
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            WeebWear is more than just clothing - it's a community of
+            WeebWear is more than just clothing - it&apos;s a community of
             like-minded individuals who share a passion for fitness and anime.
             Join us in creating a space where you can be proud of both your gym
             progress and your anime enthusiasm.

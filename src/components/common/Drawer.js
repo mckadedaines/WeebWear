@@ -9,6 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function CustomDrawer() {
   const [open, setOpen] = React.useState(false);
